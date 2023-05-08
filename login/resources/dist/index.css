@@ -1,0 +1,188 @@
+/** Fonts **/
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap");
+
+/** Variables **/
+:root {
+  --text-color: 0, 0, 0;
+  --bg-color: 255, 255, 255;
+  --yellow: #fab90f;
+  --green: #69b93c;
+  --red: #f44336;
+  --orange: #fc9403;
+  --turquoise: #44c3d4;
+  --blue: #334ac0;
+  --light-bg: #f0f0f0;
+}
+html[data-theme="dark"],
+html.dark {
+  --text-color: 255, 255, 255;
+  --bg-color: 23, 23, 23;
+  --light-bg: #232323;
+}
+
+/** Layout & typography **/
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+html {
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  margin: 0;
+  background-color: var(--light-bg);
+  color: rgba(var(--text-color), 0.8);
+  font-size: 16px;
+  line-height: 24px;
+}
+html,
+body,
+input,
+button {
+  font-family: "Inter", sans-serif;
+}
+b,
+strong {
+  font-weight: bolder;
+}
+
+/** Infobar **/
+.infobar {
+  background-color: var(--red);
+  color: rgba(var(--bg-color), 1);
+  font-size: 0.875rem;
+  line-height: 150%;
+  text-align: center;
+  padding: 0.5rem;
+}
+
+/** Login page **/
+.login {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: calc(100vh - 37px);
+  padding: 2.25rem 0;
+}
+.login__container {
+  max-width: 420px;
+  flex: 1;
+}
+.login__wrapper {
+  background-color: rgba(var(--bg-color), 1);
+  width: 100%;
+  border-radius: 0.75rem;
+  box-shadow: 0px 2px 6px rgba(var(--text-color), 0.16);
+}
+.login__header {
+  margin: 0;
+  padding: 2.25rem 3rem;
+  border-bottom: 1px solid rgba(var(--text-color), 0.12);
+}
+.login__logo {
+  height: 64px;
+  display: block;
+  margin: 0 auto;
+}
+.login__content {
+  padding: 2rem 2.25rem 3rem 2.25rem;
+}
+
+/** Form styling **/
+.form {
+  margin: 0;
+}
+.form__group {
+  margin-bottom: 1rem;
+}
+.form__actions {
+  margin-top: 2rem;
+}
+.form__label {
+  font-size: 0.875rem;
+  margin-bottom: 0.375rem;
+  color: rgba(var(--text-color), 0.6);
+  display: block;
+}
+.form__input {
+  height: 42px;
+  border: 1px solid rgba(var(--text-color), 0.18);
+  width: 100%;
+  padding: 0 2rem 0 0.75rem;
+  border-radius: 0.375rem;
+  outline: none;
+  font-size: 1rem;
+}
+.form__input:focus {
+  border: 1px solid rgba(var(--text-color), 0.38);
+}
+.form__message {
+  font-weight: 500;
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
+  color: var(--red);
+}
+
+/** Alert **/
+.alert--error {
+  padding: 0 0 0.75rem 0;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid rgba(var(--text-color), 0.18);
+  font-size: 0.875rem;
+  line-height: 150%;
+}
+.alert--error {
+  color: var(--red);
+  border-bottom-color: var(--red);
+}
+.alert--warning {
+  color: var(--orange);
+  border-bottom-color: var(--orange);
+}
+.alert--success {
+  color: var(--green);
+  border-bottom-color: var(--green);
+}
+.alert--info {
+  color: var(--blue);
+  border-bottom-color: var(--blue);
+}
+
+/** Buttons **/
+.btn {
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  border: 0;
+  text-align: center;
+  width: 100%;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.25s ease-in-out;
+}
+.btn--primary {
+  background-color: var(--yellow);
+  color: rgba(var(--text-color), 1);
+}
+.btn--primary:hover {
+  background-color: var(--blue);
+  color: rgba(var(--bg-color), 1);
+}
+.btn__icon {
+  vertical-align: -6px;
+  display: inline-block;
+  height: 1.5rem;
+  width: 1.5rem;
+  margin-left: 0.2rem;
+}
+.btn__icon path {
+  fill: rgba(var(--text-color), 0.38);
+}
+.btn:hover .btn__icon path {
+  fill: rgba(var(--bg-color), 0.38);
+}
